@@ -54,7 +54,7 @@ namespace NoSuchStudio.Common
         /// <see cref="KeyValuePair{TKey, TValue}"/>s to string
         /// representations.
         /// Runs the key and the value through
-        /// <see cref="ToStringExt{T}(T, int)"/> to handle nested
+        /// <see cref="ToStringExt(object, int)"/> to handle nested
         /// <see cref="KeyValuePair{TKey, TValue}"/>s, meaning the
         /// <see cref="KeyValuePair{TKey, TValue}.Key"/> could be a
         /// <see cref="KeyValuePair{TKey, TValue}"/>, and the
