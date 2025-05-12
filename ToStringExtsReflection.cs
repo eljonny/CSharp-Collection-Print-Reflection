@@ -19,7 +19,7 @@ namespace NoSuchStudio.Common
         /// A flag to control whether the type name is included in the
         /// string representation.
         /// </summary>
-        public static bool verbose = true;
+        public static bool verbose = false;
 
         /// <summary>
         /// Enable conversion of <see cref="ICollection{T}"/>s to string
@@ -86,8 +86,8 @@ namespace NoSuchStudio.Common
         }
 
         /// <summary>
-        /// A generic extension method to convert an object to a
-        /// string, that gracefully handles <see cref="ICollection{T}"/>s and
+        /// An extension method to convert an object to a string, that
+        /// gracefully handles null, <see cref="ICollection{T}"/>s and
         /// <see cref="KeyValuePair{TKey, TValue}"/>s, using the
         /// appropriate extension method
         /// <see cref="ToStringExtCollection{T}(ICollection{T}, int)"/>
@@ -96,15 +96,19 @@ namespace NoSuchStudio.Common
         /// Useful if you don't know the type of the object you're
         /// wanting to stringify.
         /// </summary>
-        /// <typeparam name="T">The type of the object to stringify.</typeparam>
         /// <param name="obj">The object to stringify.</param>
         /// <param name="d">Recursive depth indicator for nested <see cref="ICollection{T}"/>s and <see cref="KeyValuePair{TKey, TValue}"/>s.</param>
         /// <returns>Stringified <paramref name="obj"/>.</returns>
-        public static string ToStringExt<T>(this T obj, int d = 0)
+        public static string ToStringExt(this object obj, int d = 0)
         {
+            if (obj == null)
+            {
+                return "null";
+            }
+
             string res = null;
 
-            Type TType = typeof(T);
+            Type TType = obj.GetType();
             if (TType.IsGenericType
                 && (TType.GetGenericTypeDefinition() == typeof(KeyValuePair<,>)))
             {

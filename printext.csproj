@@ -2,7 +2,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <OutputType>Library</OutputType>
-    <RootNamespace>Nonstudio.Common</RootNamespace>
+    <RootNamespace>NoSuchStudio.Common</RootNamespace>
     <AssemblyName>NSS.CollectionsPrettyPrinter</AssemblyName>
     <DocumentationFile>bin\netstandard2.0\NSS.CollectionsPrettyPrinter.xml</DocumentationFile>
     <OutputPath>bin\</OutputPath>
@@ -30,6 +30,11 @@
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="PrintextTest\**" />
+    <EmbeddedResource Remove="PrintextTest\**" />
+    <None Remove="PrintextTest\**" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="LICENSE">
       <Pack>True</Pack>
