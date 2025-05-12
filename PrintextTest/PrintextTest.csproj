@@ -1,0 +1,13 @@
+﻿<Project Sdk="MSTest.Sdk/3.6.4">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>NoSuchStudio.Common</RootNamespace>
+    <TestingPlatformShowTestsFailure>true</TestingPlatformShowTestsFailure>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\printext.csproj" />
+  </ItemGroup>
+</Project>
