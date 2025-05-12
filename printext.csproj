@@ -1,8 +1,50 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Nonstudio.Common</RootNamespace>
+    <AssemblyName>NSS.CollectionsPrettyPrinter</AssemblyName>
+    <DocumentationFile>bin\netstandard2.0\NSS.CollectionsPrettyPrinter.xml</DocumentationFile>
+    <OutputPath>bin\</OutputPath>
+    <AssemblyTitle>NSS.CollectionsPrettyPrinter</AssemblyTitle>
+    <Description>Easily print any .Net collection in a human-readable way.</Description>
+    <Company>No Such Studio</Company>
+    <Product>Common Utilities</Product>
+    <Copyright>Copyright © 2020 Hossein Shah</Copyright>
+    <PackageVersion>1.0.0</PackageVersion>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>NSS.CollectionsPrettyPrinter</PackageId>
+    <Authors>Hossein Shah</Authors>
+    <PackageIcon>images/prettyprint.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageProjectUrl>https://nosuchstudio.medium.com/pretty-printing-c-collections-with-reflection-7df43004e2d4</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/eljonny/CSharp-Collection-Print-Reflection</RepositoryUrl>
+    <PackageReleaseNotes>
+      2025-05-12 Initial packaging.
+    </PackageReleaseNotes>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageTags>nonstudio no-such-studio collection-print util utility</PackageTags>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
-
+  <ItemGroup>
+    <None Include="LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="README.md">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="img/prettyprint.png">
+      <Pack>True</Pack>
+      <PackagePath>images/</PackagePath>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+  </ItemGroup>
 </Project>
