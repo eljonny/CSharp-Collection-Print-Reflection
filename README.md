@@ -1,3 +1,5 @@
+[![.NET](https://github.com/eljonny/CSharp-Collection-Print-Reflection/actions/workflows/dotnet.yml/badge.svg)](https://github.com/eljonny/CSharp-Collection-Print-Reflection/actions/workflows/dotnet.yml)
+
 # Easy Pretty Printing of C# Generic Collections
 A reflection based extension method for C# to print out generic collections with their contents for debugging purposes.
 
