@@ -121,4 +121,4 @@ namespace printext
 ```
 
 Output:
-![screenshot](https://raw.githubusercontent.com/eljonny/CSharp-Collection-Print-Generics/refs/heads/master/img/output.png)
+![screenshot](https://raw.githubusercontent.com/eljonny/CSharp-Collection-Print-Generics/refs/heads/main/img/output.png)

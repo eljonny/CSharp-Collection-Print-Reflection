@@ -11,6 +11,7 @@ namespace NoSuchStudio.Common.Runner
             {
                 ReflectionToStringExts.verbose = true;
             }
+
             // list
             Console.WriteLine("flat list");
             var strList = new List<string>() { "one", "two", "three" };
@@ -78,15 +79,15 @@ namespace NoSuchStudio.Common.Runner
             // list of dictionary
             Console.WriteLine("List of Dictionaries");
             var listOfDic = new List<Dictionary<int, string>>() {
-            new Dictionary<int, string>() {
-                [1] = "one",
-                [2] = "two"
-            },
-            new Dictionary<int, string>() {
-                [3] = "three",
-                [4] = "four"
-            }
-        };
+                new Dictionary<int, string>() {
+                    [1] = "one",
+                    [2] = "two"
+                },
+                new Dictionary<int, string>() {
+                    [3] = "three",
+                    [4] = "four"
+                }
+            };
             Console.WriteLine("ToString: " + listOfDic);
             Console.WriteLine("ToStringExt: " + listOfDic.ToStringExt());
             Console.WriteLine("");
